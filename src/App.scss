@@ -1,0 +1,149 @@
+
+$black: #2b2b2f;
+$white: #ffffff;
+$pink: #eb1a50;
+$pinkdarker: darken($pink,5%);
+$red: #e21e25;
+$reddarker: darken($red,5%);
+$bg: #e3e2e6;
+
+$font: 'Open Sans', sans-serif;
+$fontAlt: 'Open Sans Condensed', sans-serif;
+
+body {
+background-color: $bg;
+font-family: $font;
+h1, h2, h3, h4 {
+   font-family: $fontAlt;
+}
+
+
+.App {
+  [class*="row"] {
+  margin-bottom: 1em;
+  justify-content: center;
+}
+
+  .navbar {
+    background-color: transparent;
+     transition:500ms ease;
+    padding: 28px 0;
+    &.scrolled {
+      background-color: rgba(0,0,0,.3);
+    }
+    ul {
+      li {
+        margin: 0 2rem 0 0;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          color: $white;
+          &:hover,
+          &:visited {
+            opacity:75;
+          }
+          &.active {
+            color: $white;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .jumbotron {
+    border-radius:0;
+    text-align: center;
+    height: 466px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.7399334733893557) 0%, rgba(0,0,0,0.29735644257703087) 100%), url('img/img_01.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size:52px;
+      text-transform: uppercase;
+      color: $white;
+      margin-top:4rem;
+     
+    }
+  }
+  .filter {
+    li {
+        .nav-link{
+          font-weight:bold;
+          font-size:1rem;
+          color: $black;
+        }
+    }
+  
+  }
+  section {
+    padding: 1rem 0 4rem;
+   
+      .card {
+        min-width: 236px;
+        border-radius:8px;
+
+        .card-body {
+          padding: 16px;
+          position:relative;
+          .card-image {
+            width: 100%;
+          }
+          .card-title {
+            font-size:24px;
+            color:$black;
+            padding: 16px 0;
+            margin:0;
+            text-align:center;
+             font-family: $fontAlt;
+
+
+
+          }
+          .card-text {
+            font-size: 15.43px;
+            line-height: normal;
+            text-align:center;
+          }
+         
+        }
+        .card-footer {
+          background-color: transparent;
+          border:0px;
+           .btn {
+            display: block;
+            width:100%;
+            text-align: center;
+            padding: 10px;
+           
+            border-radius:5px;
+            color: $white;
+            background-color: $pink;
+            box-shadow: inset 0px 0px 0px 10px $red;
+            box-sizing: border-box;
+            font-size:23.15px;
+            font-family: $fontAlt;
+            &:hover,
+            &:focus {
+              background-color: $pinkdarker;
+               box-shadow: inset 0px 0px 0px 10px $reddarker;
+            }
+          }
+        }
+      }
+    
+   
+  }
+
+}
+
+}
+
+
+
+
